@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+	<h1>Welcome.</h1>
+	<h4>Please share a new post or leave some constructive comments behind. Thanks.</h4>
+<% else %>
+<%-# unless user_signed_in? -%>
+	<div>
+		<h1>Log bad driving and other traffic nonsense</h1>
+		<p>
+			Have you seen any ridiculous drivers out there? With the aim to raise road awareness and hopefully build a more considerate community, this site curates all the bad driving, hoping road users can learn NOT to make the same mistakes.  
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary" %>
+		</p>
+	</div>
+<% end %>
