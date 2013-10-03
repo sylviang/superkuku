@@ -27,7 +27,7 @@ Superkuku::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true;
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -77,4 +77,20 @@ Superkuku::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #devise setup. In production, :host should be set to the actual host of your application.
+  config.action_mailer.default_url_options = { :host => 'peaceful-oasis-6100.herokuapp.com' }
+
+  #Configuring Amazon s3 for paperclip file uploads
+  config.paperclip_defaults = {
+          :storage => :s3,
+          :s3_credentials => {
+            :bucket => ENV['AWS_BUCKET'],
+            :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+            :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+          },
+          :path => ":class/:id/:basename_:style.:extension",
+          :url => ":s3_sg_url"
+  }
+  
 end

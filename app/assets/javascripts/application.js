@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.ui.all
+//= require jquery.isotope.min.js
+//= require bootstrap
 //= require_tree .

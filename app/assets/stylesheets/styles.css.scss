@@ -1,0 +1,76 @@
+/* Change the font */
+/* $baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
+
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+$btnPrimaryBackground: orange;
+
+@import 'bootstrap';
+
+body{
+    padding-top: 200px;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar-inner {
+	@include box-shadow(none !important);
+	border:0 ;
+}
+
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+	a {
+		color: $gray;
+	}
+}
+
+/* Required for jQuery Isotope */
+
+.box {
+	margin: 15px;
+	font-size: 11px;
+	line-height: 1.4em;
+	float: left;
+	width: 320px;
+}
+
+.box img {
+	display: block;
+	width: 100%;
+}
+
+.description {
+	background: #d0483a;
+	padding: 20px;
+	font-size: 20px;
+	color: #222;
+	margin:0px;
+	border-width:0px;
+	font-family: Georgia, serif;
+	-webkit-transition: padding 0.1s linear, color 0.2s linear;
+	-moz-transition: padding 0.1s linear, color 0.2s linear;
+	-o-transition: padding 0.1s linear, color 0.2s linear;
+	-ms-transition: padding 0.1s linear, color 0.2s linear;
+	transition: padding 0.1s linear, color 0.2s linear;
+	/*postion: relative;*/
+	line-height: 24px;
+	text-indent: -0.4em;
+}
+
+.aside {
+	background-color: rgba(0,0,0,0.7);
+	color:#eee;
+	padding:20px;
+	margin:0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.video {
+	margin-bottom: -4px;
+}

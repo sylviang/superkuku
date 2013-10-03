@@ -1,0 +1,22 @@
+<div class="box">
+	<%- # link_to (image_tag post.image(:thumb)), post -%>
+	<% if post.image.blank? %>
+		<div class="video">
+			<%= raw(youtube_embed(post.video_remote_url)) %>
+		</div>
+	<% else %>
+		<%= link_to (image_tag post.image), post %>
+	<% end %>
+	<div class="description">
+		"<%= post.description %>"
+	</div>
+	<div class="aside">
+		Posted by <%= post.user.name %>
+	
+		<% if current_user == post.user %>
+			<%= link_to 'Edit', edit_post_path(post) %>
+			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+		
+	</div>
+</div>
